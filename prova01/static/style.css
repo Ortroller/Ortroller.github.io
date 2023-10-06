@@ -1,0 +1,185 @@
+body{
+  width: 100%;
+  height: fit-content;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav button:hover {
+    color: #b5e85d; 
+}
+
+nav button {
+    background-color: #333;
+    color: white;
+    border-style: none;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    cursor: pointer;
+    font-size: larger ;
+
+    border-radius: 8px;
+}
+
+nav button:active{
+
+  box-shadow: 2px 3px 1px;
+  transform: translate(4px, 6px);
+
+}
+
+img{
+    width: 150px;
+    height: 150px;
+}
+
+.content{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background-color: #dbd5d5;
+}
+
+.left_menu{
+  flex: 1;
+  min-width: 20vw;
+  width: 20vw;
+  min-height: 1200px;
+  background-color: #333;
+  display: grid;
+  justify-items: center;
+}
+
+.left_menu li a{
+  color: white;
+  font-weight: bold;
+  font-size: large;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.left_menu li{
+  padding: 20px;
+  cursor: pointer;
+}
+
+.left_menu li a:hover{
+  color: greenyellow;
+}
+
+.left_menu ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@media screen and (max-width: 600px){
+  .content{
+    flex-direction: column;
+  }
+
+  .left_menu{
+    width: 100%;  
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin-top: 1px;
+  }
+
+}
+
+.galery{
+  flex: 4;
+  min-width: 80vw;
+  min-height: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+}
+
+.galery article{
+  margin-left: 10px;
+} 
+
+.galery span{
+  margin-top: 10px;
+  align-self: center;
+}
+
+footer{
+  background-color: #dbd5d5;
+  color: black;
+  bottom: 0px;
+  text-align: center;
+}
+
+/* DROPDOWN SECTION */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: whitesmoke;
+  min-width: 300px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.dropdown:active .dropdown-content {display: block;}
+
+/* loader */
+
+.loader {
+  width: 48px; /* Diz a largura do componente */
+  height: 48px; /* Diz a largura do componente */
+  border: 5px solid green; /* Diz que a borda deve ser tamanho de 5 pixels, com preenchimento solido e de cor verde*/
+  border-bottom-color: transparent; /* coloca a borda superior transparente, para dar efeito a circulo cortado*/
+  border-radius: 50%; /* Deixa as bordas arrendodadas, para dar aspecto de circulo*/
+  display: inline-block; /* Faz com que as margens e paddings superiores sejam respeitadas */
+  box-sizing: border-box; /* Inclui tamanhos de padding e borda a largura e altura total do componente */
+  animation: rotation 1s linear infinite; /* chama a animação "rotation", com duração de 1s, execução linear de tempo e repetição infinita*/
+  }
+
+  @keyframes rotation { /* Define o nome da animação */
+  0% { /* frame inicial, 0% da animação*/
+      transform: rotate(0deg); /* Define transformação, neste caso, rotação de 0 graus */
+    }
+  100% { /* frame final, 100% da animação*/
+      transform: rotate(360deg); /* Define transformação, no caso, uma rotação completa */
+    }
+  } /* Efeito que, com a linearização, faz com que a componente afetado gire em 360 graus*/
