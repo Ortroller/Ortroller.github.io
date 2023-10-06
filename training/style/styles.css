@@ -1,0 +1,93 @@
+
+body{
+    margin: 0;
+    background-color: #333;
+}
+
+header{
+    background-color: #343;
+    height: 140px;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 100px;
+}
+
+#photo{
+    width: 100px;
+    height: 100px;
+    min-width: fit-content;
+    background-color: aliceblue;
+    border-radius: 100%;
+    margin-left: 15px;
+    overflow: clip;
+    transition: 250ms;
+}
+
+#photo img{
+    width: inherit;
+    height: inherit;
+}
+
+#photo:hover{
+    width: 120px;
+    height: 120px;
+}
+
+#space{
+    width: 10px;
+    height: 1200px;
+}
+
+.main{
+    margin-left: 20px;
+    max-width: 90vw;
+}
+
+header > ul{
+    /* flex: 2; */
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+header > ul li{
+    color: white;
+    width: fit-content;
+    padding: 5px;
+    height: 20px;
+    margin: 20px;
+    background-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 400ms;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+header > ul li:hover{
+    color: greenyellow;
+}
+
+
+header > button{
+    margin-left: auto;
+    margin-right: 10px;
+    height: 30px;
+    width: fit-content;
+    border-style: none;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 250ms;
+}
+
+header > button:hover{
+    background-color: #A10;
+}
